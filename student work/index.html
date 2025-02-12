@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Work Zone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Work Zone</h1>
+        <button onclick="showSection('postJob')">Post a Job</button>
+        <button onclick="showSection('applyJob')">Apply for a Job</button>
+    </div>
+
+    <!-- Post Job Section -->
+    <div class="container section" id="postJob" style="display: none;">
+        <h2>Post a Job</h2>
+        <form id="postJobForm">
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <input type="password" id="password" placeholder="Set Password" required>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+            
+            <h3>Job Details</h3>
+            <input type="text" id="jobType" placeholder="Job Type" required>
+            <textarea id="description" placeholder="Job Description" required></textarea>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <input type="number" id="salary" placeholder="Salary" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <input type="text" id="dressCode" placeholder="Dress Code">
+            <select id="foodProvided">
+                <option value="Yes">Food Provided</option>
+                <option value="No">Food Not Provided</option>
+            </select>
+            <input type="text" id="contactDetails" placeholder="Contact Details" required>
+            <textarea id="conditions" placeholder="Conditions (Optional)"></textarea>
+            
+            <button type="submit">Post Job</button>
+        </form>
+    </div>
+
+    <!-- Apply Job Section -->
+    <div class="container section" id="applyJob" style="display: none;">
+        <h2>Apply for a Job</h2>
+        <form id="applyJobForm">
+            <input type="email" id="applicantEmail" placeholder="Enter Email" required>
+            <input type="password" id="applicantPassword" placeholder="Set Password" required>
+
+            <h3>Available Jobs</h3>
+            <select id="jobList">
+                <option>Select a Job</option>
+                <!-- Jobs will be loaded here dynamically -->
+            </select>
+
+            <h3>Your Details</h3>
+            <input type="text" id="applicantName" placeholder="Your Name" required>
+            <input type="number" id="applicantAge" placeholder="Your Age" required>
+            <input type="tel" id="applicantMobile" placeholder="Mobile Number" required>
+            <input type="email" id="applicantConfirmEmail" placeholder="Confirm Email" required>
+            <input type="file" id="applicantPhoto" accept="image/*" required>
+
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
